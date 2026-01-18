@@ -4935,6 +4935,484 @@ export const plantsDatabase: Plant[] = [
       source: "user-provided",
     },
   },
+
+  // Black Beauty Eggplant
+  {
+    id: "eggplant-black-beauty",
+    commonName: "Eggplant",
+    variety: "Black Beauty",
+    scientificName: "Solanum melongena",
+    brand: "GreenSeed",
+
+    soilRichness: [SoilRichness.Rich, SoilRichness.VeryRich],
+    soilPH: {
+      min: 5.5,
+      max: 6.8,
+      ideal: 6.0,
+    },
+
+    spacing: {
+      betweenPlants: 21,
+      betweenRows: 30,
+      squareFootDensity: 1,
+    },
+
+    plantingMethod: PlantingMethod.Transplant,
+    springTiming: {
+      indoorStart: {
+        earliest: { weeksFromFrost: -8, frostReference: "last-spring-frost" },
+        latest: { weeksFromFrost: -6, frostReference: "last-spring-frost" },
+      },
+      transplant: {
+        earliest: { weeksFromFrost: 0, frostReference: "last-spring-frost" },
+        latest: { weeksFromFrost: 2, frostReference: "last-spring-frost" },
+      },
+    },
+
+    seedDepth: 0.25,
+    temperature: {
+      soilTempMin: 60,
+      soilTempIdeal: 85,
+      airTempMin: 60,
+      airTempMax: 95,
+    },
+    germinationDays: 10,
+
+    frostTolerance: {
+      seedling: FrostTolerance.Tender,
+      mature: FrostTolerance.Tender,
+    },
+
+    sunRequirement: SunRequirement.FullSun,
+    waterRequirement: WaterRequirement.Moderate,
+
+    harvestStages: [
+      {
+        stage: "mature",
+        daysFromPlanting: 80,
+        description: "Classic dark purple-black eggplant, 24-30 inches tall",
+        harvestTips: "Harvest when skin is glossy and fruit is firm. Cut rather than pull from plant. Classic heirloom variety with excellent flavor.",
+      },
+    ],
+
+    companions: [
+      {
+        plantId: "bean-generic",
+        plantName: "Beans",
+        relationship: "beneficial",
+        reason: "Beans fix nitrogen in the soil, benefiting heavy-feeding eggplants",
+      },
+      {
+        plantId: "marigold-generic",
+        plantName: "Marigold",
+        relationship: "beneficial",
+        reason: "Deters nematodes and flea beetles",
+        distanceNotes: "Plant around perimeter of bed",
+      },
+      {
+        plantId: "thyme-generic",
+        plantName: "Thyme",
+        relationship: "beneficial",
+        reason: "Repels flea beetles and cabbage worms",
+      },
+      {
+        plantId: "pepper-generic",
+        plantName: "Peppers",
+        relationship: "beneficial",
+        reason: "Both are nightshades with similar growing requirements",
+      },
+      {
+        plantId: "tomato-generic",
+        plantName: "Tomatoes",
+        relationship: "detrimental",
+        reason: "Both are nightshades susceptible to same diseases and pests. Rotate, don't plant together.",
+      },
+      {
+        plantId: "potato-generic",
+        plantName: "Potatoes",
+        relationship: "detrimental",
+        reason: "Attract Colorado potato beetles and share disease susceptibility",
+      },
+    ],
+
+    care: {
+      fertilizing: "Heavy feeder. Side-dress with compost or balanced fertilizer every 3 weeks. Apply calcium to prevent blossom end rot.",
+      mulching: "Mulch to retain moisture and warmth. Black plastic mulch can help warm soil.",
+      support: "May need staking for heavy fruit load",
+      commonPests: ["Flea beetles", "Colorado potato beetles", "Aphids", "Spider mites"],
+      commonDiseases: ["Verticillium wilt", "Fusarium wilt", "Phytophthora blight", "Bacterial wilt"],
+      preventionTips: "Use row covers early season to protect from flea beetles. Rotate crops annually, avoiding nightshade family locations. Needs warm soil (60°F+) and air temperatures. Ensure consistent moisture.",
+    },
+
+    tags: ["greenseed", "agri-co-op", "annual", "warm-season", "nightshade", "heirloom"],
+    notes: "Black Beauty is a classic heirloom eggplant producing dark purple-black fruits. Plants grow 24-30 inches tall. Can grow in 18-inch diameter containers. Purchased at agri co-op. Days to maturity: 80 days from transplant (100-120 from seed).",
+    metadata: {
+      dateAdded: "2026-01-17",
+      source: "agri-co-op",
+    },
+  },
+
+  // Long Island Mammoth Dill
+  {
+    id: "dill-long-island-mammoth",
+    commonName: "Dill",
+    variety: "Long Island Mammoth",
+    scientificName: "Anethum graveolens",
+    brand: "GreenSeed",
+
+    soilRichness: [SoilRichness.Moderate, SoilRichness.Rich],
+    soilPH: {
+      min: 5.0,
+      max: 7.0,
+      ideal: 6.5,
+    },
+
+    spacing: {
+      betweenPlants: 9,
+      betweenRows: 21,
+      squareFootDensity: 4,
+    },
+
+    plantingMethod: PlantingMethod.DirectSeed,
+    springTiming: {
+      directSeed: {
+        earliest: { weeksFromFrost: -2, frostReference: "last-spring-frost" },
+        latest: { weeksFromFrost: 4, frostReference: "last-spring-frost" },
+      },
+    },
+
+    seedDepth: 0.25,
+    temperature: {
+      soilTempMin: 60,
+      soilTempIdeal: 70,
+      airTempMin: 50,
+      airTempMax: 85,
+    },
+    germinationDays: 12,
+
+    successionPlanting: {
+      intervalWeeks: 3,
+      notes: "Succession plant every 2-3 weeks for continuous harvest throughout season",
+    },
+
+    frostTolerance: {
+      seedling: FrostTolerance.HalfHardy,
+      mature: FrostTolerance.HalfHardy,
+    },
+
+    sunRequirement: SunRequirement.FullSun,
+    waterRequirement: WaterRequirement.Moderate,
+
+    harvestStages: [
+      {
+        stage: "leaf",
+        daysFromPlanting: 40,
+        description: "Fresh dill leaves for culinary use",
+        harvestTips: "Harvest leaves as needed, cutting outer leaves first. Use fresh or dry for storage.",
+      },
+      {
+        stage: "flower",
+        daysFromPlanting: 60,
+        description: "Dill flowers for pickling",
+        harvestTips: "Harvest flower heads when yellow blooms appear. Perfect for pickles and preserving.",
+      },
+      {
+        stage: "seed",
+        daysFromPlanting: 70,
+        description: "Mature seed heads for culinary and planting",
+        harvestTips: "Harvest when seeds turn brown. Dry completely before storing. Tall plants reach 4-5 feet.",
+      },
+    ],
+
+    companions: [
+      {
+        plantId: "cucumber-generic",
+        plantName: "Cucumber",
+        relationship: "beneficial",
+        reason: "Attracts beneficial insects and improves cucumber vigor",
+      },
+      {
+        plantId: "lettuce-generic",
+        plantName: "Lettuce",
+        relationship: "beneficial",
+        reason: "Dill provides light shade for lettuce in warm weather",
+      },
+      {
+        plantId: "onion-generic",
+        plantName: "Onions",
+        relationship: "beneficial",
+        reason: "Repels aphids and attracts beneficial insects",
+      },
+      {
+        plantId: "brassica-generic",
+        plantName: "Brassicas (Cabbage, Broccoli)",
+        relationship: "beneficial",
+        reason: "Attracts beneficial wasps that prey on cabbage worms",
+      },
+      {
+        plantId: "tomato-generic",
+        plantName: "Tomatoes",
+        relationship: "beneficial",
+        reason: "Attracts beneficial insects but avoid planting mature dill near young tomatoes as it can stunt growth",
+        distanceNotes: "Plant at least 2 feet away from tomatoes",
+      },
+      {
+        plantId: "carrot-generic",
+        plantName: "Carrots",
+        relationship: "detrimental",
+        reason: "Can cross-pollinate and reduce carrot vigor. Both are in Apiaceae family.",
+      },
+    ],
+
+    care: {
+      fertilizing: "Light feeder. Amend soil with compost before planting. Generally doesn't need additional feeding.",
+      support: "Tall variety (4-5 feet) may need staking in windy locations",
+      mulching: "Light mulch to retain moisture",
+      commonPests: ["Aphids", "Parsley worms (swallowtail butterfly larvae)", "Spider mites"],
+      commonDiseases: ["Damping off", "Leaf blight", "Powdery mildew"],
+      preventionTips: "Provide good air circulation. Does NOT like transplanting - direct seed only. Self-seeds readily if flowers allowed to mature. Avoid overhead watering to prevent disease.",
+    },
+
+    tags: ["greenseed", "agri-co-op", "annual", "herb", "cool-season", "succession-plant"],
+    notes: "Long Island Mammoth is a tall dill variety reaching 4-5 feet. Does NOT like transplanting - must be direct seeded. Succession plant every 2-3 weeks for continuous harvest. Excellent for fresh use, drying, pickling, and seed harvest. Purchased at agri co-op.",
+    metadata: {
+      dateAdded: "2026-01-17",
+      source: "agri-co-op",
+    },
+  },
+
+  // Red Acre Cabbage
+  {
+    id: "cabbage-red-acre",
+    commonName: "Cabbage",
+    variety: "Red Acre",
+    scientificName: "Brassica oleracea",
+    brand: "GreenSeed",
+
+    soilRichness: [SoilRichness.Rich, SoilRichness.VeryRich],
+    soilPH: {
+      min: 6.0,
+      max: 7.5,
+      ideal: 6.5,
+    },
+
+    spacing: {
+      betweenPlants: 15,
+      betweenRows: 30,
+      squareFootDensity: 1,
+    },
+
+    plantingMethod: PlantingMethod.Either,
+    springTiming: {
+      indoorStart: {
+        earliest: { weeksFromFrost: -6, frostReference: "last-spring-frost" },
+        latest: { weeksFromFrost: -4, frostReference: "last-spring-frost" },
+      },
+      transplant: {
+        earliest: { weeksFromFrost: -4, frostReference: "last-spring-frost" },
+        latest: { weeksFromFrost: -2, frostReference: "last-spring-frost" },
+      },
+      directSeed: {
+        earliest: { weeksFromFrost: -4, frostReference: "last-spring-frost" },
+        latest: { weeksFromFrost: -2, frostReference: "last-spring-frost" },
+      },
+    },
+    fallTiming: {
+      indoorStart: {
+        earliest: { weeksFromFrost: -14, frostReference: "first-fall-frost" },
+        latest: { weeksFromFrost: -12, frostReference: "first-fall-frost" },
+      },
+      transplant: {
+        earliest: { weeksFromFrost: -12, frostReference: "first-fall-frost" },
+        latest: { weeksFromFrost: -10, frostReference: "first-fall-frost" },
+      },
+    },
+
+    seedDepth: 0.375,
+    temperature: {
+      soilTempMin: 65,
+      soilTempIdeal: 70,
+      airTempMin: 40,
+      airTempMax: 75,
+    },
+    germinationDays: 8,
+
+    frostTolerance: {
+      seedling: FrostTolerance.Hardy,
+      mature: FrostTolerance.VeryHardy,
+    },
+
+    sunRequirement: SunRequirement.FullSun,
+    waterRequirement: WaterRequirement.Moderate,
+
+    harvestStages: [
+      {
+        stage: "mature",
+        daysFromPlanting: 80,
+        description: "Compact red-purple heads, 2-4 lbs, 6-7 inches diameter",
+        harvestTips: "Cut head at base when firm and solid. Excellent for fresh eating, coleslaw, and storage. Tends to bolt in warm weather, so plant for cool season harvest.",
+      },
+    ],
+
+    companions: [
+      {
+        plantId: "beet-generic",
+        plantName: "Beets",
+        relationship: "beneficial",
+        reason: "Both are heavy feeders but have different root depths, minimizing competition",
+      },
+      {
+        plantId: "celery-generic",
+        plantName: "Celery",
+        relationship: "beneficial",
+        reason: "Celery deters cabbage white butterflies",
+      },
+      {
+        plantId: "onion-generic",
+        plantName: "Onions",
+        relationship: "beneficial",
+        reason: "Repels cabbage worms and aphids",
+      },
+      {
+        plantId: "dill-generic",
+        plantName: "Dill",
+        relationship: "beneficial",
+        reason: "Attracts beneficial wasps that prey on cabbage worms",
+      },
+      {
+        plantId: "nasturtium-generic",
+        plantName: "Nasturtium",
+        relationship: "beneficial",
+        reason: "Acts as trap crop for aphids",
+      },
+      {
+        plantId: "thyme-generic",
+        plantName: "Thyme",
+        relationship: "beneficial",
+        reason: "Repels cabbage worms",
+      },
+      {
+        plantId: "tomato-generic",
+        plantName: "Tomatoes",
+        relationship: "detrimental",
+        reason: "Tomatoes can stunt cabbage growth and compete for nutrients",
+      },
+      {
+        plantId: "strawberry-generic",
+        plantName: "Strawberries",
+        relationship: "detrimental",
+        reason: "Both attract similar pests and compete for nutrients",
+      },
+      {
+        plantId: "pole-bean-generic",
+        plantName: "Pole Beans",
+        relationship: "detrimental",
+        reason: "Can inhibit cabbage growth",
+      },
+    ],
+
+    care: {
+      fertilizing: "Heavy feeder. Apply compost at planting and side-dress with nitrogen-rich fertilizer every 3 weeks. Requires consistent nitrogen for head development.",
+      mulching: "Mulch to retain moisture and regulate soil temperature",
+      commonPests: ["Cabbage worms", "Aphids", "Flea beetles", "Cabbage loopers", "Cabbage root maggots"],
+      commonDiseases: ["Clubroot", "Black rot", "Fusarium yellows", "Downy mildew"],
+      preventionTips: "Use row covers to protect from pests. Rotate crops annually, avoiding brassica family locations for 3-4 years. Ensure good drainage. Grows best in temperatures between 40-75°F. Tends to bolt in warm weather, so time plantings for cool season harvest.",
+    },
+
+    tags: ["greenseed", "agri-co-op", "annual", "cool-season", "brassica", "storage-cabbage"],
+    notes: "Red Acre is a compact storage cabbage producing red-purple heads weighing 2-4 lbs with 6-7 inch diameter. Days to maturity: 70 days (or 80-90 from transplant). Tends to bolt in warm weather, so best planted for spring or fall harvest in cool temperatures. Excellent for fresh eating, coleslaw, and storage. Purchased at agri co-op.",
+    metadata: {
+      dateAdded: "2026-01-17",
+      source: "agri-co-op",
+    },
+  },
+
+  // Common Lilac (home-saved)
+  {
+    id: "lilac-common-home-saved",
+    commonName: "Lilac",
+    variety: "Common (variety unknown)",
+    scientificName: "Syringa vulgaris",
+    brand: "Home-saved",
+
+    soilRichness: [SoilRichness.Moderate, SoilRichness.Rich],
+    soilPH: {
+      min: 6.5,
+      max: 7.5,
+      ideal: 7.0,
+    },
+
+    spacing: {
+      betweenPlants: 60,
+      betweenRows: 96,
+      squareFootDensity: 0,
+    },
+
+    plantingMethod: PlantingMethod.Either,
+    springTiming: {
+      directSeed: {
+        earliest: { weeksFromFrost: -4, frostReference: "last-spring-frost" },
+        latest: { weeksFromFrost: 0, frostReference: "last-spring-frost" },
+      },
+    },
+    fallTiming: {
+      directSeed: {
+        earliest: { weeksFromFrost: 4, frostReference: "first-fall-frost" },
+        latest: { weeksFromFrost: 8, frostReference: "first-fall-frost" },
+      },
+    },
+
+    seedDepth: 0.25,
+    temperature: {
+      soilTempMin: 60,
+      soilTempIdeal: 70,
+      airTempMin: 40,
+      airTempMax: 85,
+    },
+    germinationDays: 30,
+    germinationRequirements: {
+      stratification: {
+        type: "cold",
+        duration: 50,
+        temperature: 40,
+        notes: "Mix seeds with moist vermiculite or peat moss and store in refrigerator for 40-60 days. Alternatively, winter sow outdoors for natural stratification.",
+      },
+      specialNotes: "Germination takes 14-45 days after stratification. Plants grown from seed take 3-5 years to bloom. Can also be winter sown for natural stratification without refrigeration.",
+    },
+
+    frostTolerance: {
+      seedling: FrostTolerance.VeryHardy,
+      mature: FrostTolerance.VeryHardy,
+    },
+
+    sunRequirement: SunRequirement.FullSun,
+    waterRequirement: WaterRequirement.Low,
+
+    harvestStages: [
+      {
+        stage: "bloom",
+        daysFromPlanting: 1460,
+        description: "First blooms appear 3-5 years from seed",
+        harvestTips: "Cut flowering branches for fragrant bouquets. Prune immediately after flowering for best results. Remove spent flowers to encourage better blooming next year.",
+      },
+    ],
+
+    care: {
+      fertilizing: "Light feeder. Apply compost in early spring. Avoid high-nitrogen fertilizers which promote foliage over blooms.",
+      pruning: "Prune immediately after flowering. Remove dead wood and thin crowded branches. Rejuvenate old shrubs by removing 1/3 of oldest stems at ground level annually.",
+      mulching: "Light mulch around base, keeping mulch away from trunk",
+      commonPests: ["Lilac borers", "Scale insects", "Leaf miners"],
+      commonDiseases: ["Powdery mildew", "Bacterial blight", "Verticillium wilt"],
+      preventionTips: "Ensure good air circulation. Plant in well-draining soil. Avoid overhead watering. Remove and destroy diseased plant material promptly. Prune to maintain open structure.",
+    },
+
+    tags: ["home-saved", "unknown-variety", "perennial", "shrub", "zones-3-7", "fragrant", "pollinator-friendly"],
+    notes: "Seeds collected from home garden. Exact cultivar unknown. Common lilac (Syringa vulgaris) species. Perennial shrub hardy in zones 3-7. Requires cold stratification: 40-60 days in refrigerator or winter sowing. Germination takes 14-45 days after stratification. Plants grown from seed take 3-5 years to bloom. Full sun preferred. Makes excellent fragrant hedge or specimen plant.",
+    metadata: {
+      dateAdded: "2026-01-17",
+      source: "home-saved",
+    },
+  },
 ];
 
 /**
