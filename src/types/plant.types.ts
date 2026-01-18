@@ -63,6 +63,29 @@ export interface TemperatureRequirement {
 }
 
 /**
+ * Special germination requirements
+ */
+export interface GerminationRequirements {
+  stratification?: {
+    type: "cold" | "warm" | "cold-warm" | "warm-cold";
+    duration: number; // days
+    temperature: number; // Fahrenheit
+    notes?: string;
+  };
+  scarification?: {
+    method: "mechanical" | "chemical" | "hot-water";
+    notes?: string;
+  };
+  soaking?: {
+    duration: number; // hours
+    temperature?: number; // Fahrenheit
+    notes?: string;
+  };
+  lightRequirement?: "light" | "dark" | "either";
+  specialNotes?: string;
+}
+
+/**
  * Spring planting timing
  */
 export interface SpringTiming {
@@ -118,6 +141,7 @@ export interface Plant {
   seedDepth: number; // inches
   temperature: TemperatureRequirement;
   germinationDays: number; // typical days to germinate
+  germinationRequirements?: GerminationRequirements;
 
   // Succession planting
   successionPlanting?: SuccessionPlanting;
