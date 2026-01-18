@@ -36,21 +36,33 @@ When adding new seeds to the database, follow these tagging rules:
    - Example: `"#ASP1"`, `"#BA3"`, `"#TOM45"`
    - Keep the original format (including # symbol)
 
-3. **Add descriptive tags**
-   - Plant type: `"annual"`, `"perennial"`, `"biennial"`
+3. **REQUIRED: Add lifecycle tag** (exactly ONE required)
+   - `"annual"` - completes life cycle in one growing season
+   - `"perennial"` - lives multiple years
+   - `"biennial"` - completes life cycle in two years
+
+4. **REQUIRED: Add purpose tag** (at least ONE required)
+   - `"food"` - edible plants (vegetables, fruits, culinary herbs)
+   - `"flower"` - ornamental flowers grown for beauty
+   - `"medicinal"` - plants with medicinal properties
+   - **Note:** Plants can have multiple purpose tags (e.g., yarrow is both "flower" and "medicinal")
+
+5. **Add descriptive tags** (optional but recommended)
    - Season: `"cool-season"`, `"warm-season"`
    - Special characteristics: `"heirloom"`, `"drought-tolerant"`, `"pollinator-friendly"`
    - Growing method: `"succession-plant"`, `"cut-and-come-again"`
    - Hardiness zones: `"zones-3-9"`, `"zone-4"`
+   - Plant family: `"brassica"`, `"nightshade"`, `"allium"`, etc.
 
-4. **Example complete tag set:**
+6. **Example complete tag set:**
    ```typescript
    tags: [
-     "perennial",
-     "zones-3-9",
-     "freeheirloomseeds.org",
-     "#ASP1",
-     "long-lived"
+     "perennial",      // lifecycle (REQUIRED)
+     "food",           // purpose (REQUIRED)
+     "zones-3-9",      // descriptive
+     "freeheirloomseeds.org",  // distributor
+     "#ASP1",          // product ID
+     "long-lived"      // descriptive
    ]
    ```
 
@@ -194,16 +206,23 @@ Should complete with no errors.
 
 ## Current Database Stats
 
-- **Total plants**: 60
-  - 2 original examples
+- **Total plants**: 69
+  - 2 original examples (Tomato, Lettuce)
   - 57 from freeheirloomseeds.org
   - 1 Beit Alpha cucumber
-- **Plants with special germination requirements**: 8
+  - 4 from GreenSeed (via agri co-op)
+  - 5 from Burpee
+  - 1 home-saved (Lilac)
+- **By lifecycle**: 36 annual, 14 perennial, 19 biennial
+- **By purpose**: 55 food, 15 flower, 6 medicinal
+- **Plants with special germination requirements**: 10
   - Asparagus (2 varieties) - cold stratification + soaking
   - Yarrow - cold stratification + light
   - Lovage - cold stratification (optional)
   - Sweet William (2 varieties) - cold stratification (optional) + light
   - Parsley (2 varieties) - warm water soaking
+  - Lilac - cold stratification (40-60 days)
+  - Russell Hybrid Lupine - scarification + soaking + cold stratification (optional)
 
 ## Important Reminders
 
