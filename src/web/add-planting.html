@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Planting - Hillebrecht Garden</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌱 Add New Planting</h1>
+            <p class="subtitle">Record what you're growing this season</p>
+        </header>
+
+        <nav>
+            <a href="/plantings.html" class="btn btn-primary">← Back to Plantings</a>
+        </nav>
+
+        <div id="response-message"></div>
+
+        <form
+            class="plant-form"
+            hx-post="/api/plantings"
+            hx-target="#response-message"
+            hx-swap="innerHTML"
+        >
+            <fieldset>
+                <legend>Basic Information (Required)</legend>
+
+                <div class="form-group">
+                    <label for="plantId">Plant Variety ID *</label>
+                    <input type="text" id="plantId" name="plantId" required placeholder="e.g., tomato-cherokee-purple">
+                    <small>The ID from the plants database (use lowercase with hyphens)</small>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="year">Year *</label>
+                        <input type="number" id="year" name="year" required value="2026" min="2020" max="2050">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="season">Season *</label>
+                        <select id="season" name="season" required>
+                            <option value="">-- Select Season --</option>
+                            <option value="spring">Spring</option>
+                            <option value="summer">Summer</option>
+                            <option value="fall">Fall</option>
+                            <option value="winter">Winter</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Location</legend>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="bedId">Bed ID</label>
+                        <input type="text" id="bedId" name="bedId" placeholder="e.g., raised-bed-1, garden-bed-a">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="location">Location Description</label>
+                        <input type="text" id="location" name="location" placeholder="e.g., North side, partial shade">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="row">Row Number</label>
+                        <input type="number" id="row" name="row" placeholder="1">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="position">Position</label>
+                        <input type="text" id="position" name="position" placeholder="e.g., west end, middle">
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Quantities</legend>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="quantity">Number of Plants</label>
+                        <input type="number" id="quantity" name="quantity" value="1" min="1">
+                        <small>How many plants will be growing</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="seedsPlanted">Seeds Planted</label>
+                        <input type="number" id="seedsPlanted" name="seedsPlanted" placeholder="e.g., 12">
+                        <small>If starting from seed (optional)</small>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Schedule (Optional)</legend>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="indoorStartDate">Indoor Start Date</label>
+                        <input type="date" id="indoorStartDate" name="indoorStartDate">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="transplantDate">Transplant Date</label>
+                        <input type="date" id="transplantDate" name="transplantDate">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="directSeedDate">Direct Seed Date</label>
+                        <input type="date" id="directSeedDate" name="directSeedDate">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="harvestStartDate">Expected Harvest Start</label>
+                        <input type="date" id="harvestStartDate" name="harvestStartDate">
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Status & Notes</legend>
+
+                <div class="form-group">
+                    <label for="status">Current Status</label>
+                    <select id="status" name="status">
+                        <option value="planned" selected>Planned</option>
+                        <option value="seeds-started">Seeds Started</option>
+                        <option value="planted">Planted</option>
+                        <option value="growing">Growing</option>
+                        <option value="harvesting">Harvesting</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="companionPlantIds">Companion Plants (comma-separated IDs)</label>
+                    <input type="text" id="companionPlantIds" name="companionPlantIds" placeholder="e.g., basil-genovese, marigold-french">
+                </div>
+
+                <div class="form-group">
+                    <label for="notes">Notes</label>
+                    <textarea id="notes" name="notes" rows="4" placeholder="Any observations, companion plants, or special conditions"></textarea>
+                </div>
+            </fieldset>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-success">Add Planting</button>
+                <button type="reset" class="btn btn-secondary">Reset Form</button>
+                <a href="/plantings.html" class="btn btn-secondary">Cancel</a>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Reset response message on form reset
+        document.querySelector('form').addEventListener('reset', function() {
+            document.getElementById('response-message').innerHTML = '';
+        });
+
+        // Listen for successful submission
+        document.body.addEventListener('htmx:afterRequest', function(event) {
+            if (event.detail.successful) {
+                setTimeout(() => {
+                    document.querySelector('form').reset();
+                }, 2000);
+            }
+        });
+    </script>
+</body>
+</html>

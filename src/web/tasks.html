@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garden Tasks - Hillebrecht Garden</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌱 Garden Tasks</h1>
+            <p class="subtitle">Manage your garden to-do list</p>
+        </header>
+
+        <nav>
+            <a href="/" class="btn btn-primary">Plants</a>
+            <a href="/plantings.html" class="btn btn-primary">Plantings</a>
+            <a href="/tasks.html" class="btn btn-primary active">Tasks</a>
+            <a href="/add-task.html" class="btn btn-success">+ Add Task</a>
+        </nav>
+
+        <div class="filters">
+            <select
+                id="status-filter"
+                hx-get="/api/tasks"
+                hx-trigger="change"
+                hx-target="#task-table-body"
+                hx-include="[name='status']"
+                name="status"
+                class="filter-select"
+            >
+                <option value="">All Statuses</option>
+                <option value="pending" selected>Pending</option>
+                <option value="in-progress">In Progress</option>
+                <option value="completed">Completed</option>
+                <option value="skipped">Skipped</option>
+            </select>
+
+            <select
+                id="category-filter"
+                hx-get="/api/tasks"
+                hx-trigger="change"
+                hx-target="#task-table-body"
+                hx-include="[name='category']"
+                name="category"
+                class="filter-select"
+            >
+                <option value="">All Categories</option>
+                <option value="watering">Watering</option>
+                <option value="fertilization">Fertilization</option>
+                <option value="harvest">Harvest</option>
+                <option value="planting">Planting</option>
+                <option value="pruning">Pruning</option>
+                <option value="pest-management">Pest Management</option>
+                <option value="maintenance">Maintenance</option>
+                <option value="general">General</option>
+            </select>
+        </div>
+
+        <div class="table-container">
+            <table class="plant-table">
+                <thead>
+                    <tr>
+                        <th>Task</th>
+                        <th>Category</th>
+                        <th>Due Date</th>
+                        <th>Priority</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody
+                    id="task-table-body"
+                    hx-get="/api/tasks?status=pending"
+                    hx-trigger="load, taskUpdated from:body"
+                    hx-swap="innerHTML"
+                >
+                    <tr>
+                        <td colspan="6" class="loading">Loading tasks...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <footer>
+            <p><a href="https://github.com/anthropics/claude-code" target="_blank">Powered by Claude Code</a></p>
+        </footer>
+    </div>
+</body>
+</html>

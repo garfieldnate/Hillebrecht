@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Task - Hillebrecht Garden</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📝 Add New Task</h1>
+            <p class="subtitle">Create a one-time task or recurring template</p>
+        </header>
+
+        <nav>
+            <a href="/tasks.html" class="btn btn-primary">← Back to Tasks</a>
+        </nav>
+
+        <div id="response-message"></div>
+
+        <form
+            class="plant-form"
+            hx-post="/api/tasks"
+            hx-target="#response-message"
+            hx-swap="innerHTML"
+        >
+            <fieldset>
+                <legend>Basic Information (Required)</legend>
+
+                <div class="form-group">
+                    <label for="name">Task Name *</label>
+                    <input type="text" id="name" name="name" required placeholder="e.g., Water Tomatoes">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="category">Category *</label>
+                        <select id="category" name="category" required>
+                            <option value="">-- Select Category --</option>
+                            <option value="watering">Watering</option>
+                            <option value="fertilization">Fertilization</option>
+                            <option value="harvest">Harvest</option>
+                            <option value="planting">Planting</option>
+                            <option value="pruning">Pruning</option>
+                            <option value="pest-management">Pest Management</option>
+                            <option value="maintenance">Maintenance</option>
+                            <option value="general">General</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="priority">Priority</label>
+                        <select id="priority" name="priority">
+                            <option value="">-- Default: Medium --</option>
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                            <option value="critical">Critical</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <input type="text" id="description" name="description" placeholder="Brief description of the task">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Schedule</legend>
+
+                <div class="form-group">
+                    <label for="recurrenceType">Recurrence Type</label>
+                    <select id="recurrenceType" name="recurrenceType" onchange="updateScheduleFields(this.value)">
+                        <option value="one-time">One-Time (Specific Date)</option>
+                        <option value="calendar">Calendar-Based (Weekly/Monthly)</option>
+                        <option value="seasonal">Seasonal (During Specific Seasons)</option>
+                    </select>
+                    <small>Choose how often this task repeats</small>
+                </div>
+
+                <!-- One-Time Fields -->
+                <div id="one-time-fields" class="schedule-fields">
+                    <div class="form-group">
+                        <label for="oneTimeDate">Task Date *</label>
+                        <input type="date" id="oneTimeDate" name="oneTimeDate">
+                    </div>
+                </div>
+
+                <!-- Calendar Fields -->
+                <div id="calendar-fields" class="schedule-fields" style="display:none;">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="intervalType">Interval Type</label>
+                            <select id="intervalType" name="intervalType">
+                                <option value="weekly">Weekly</option>
+                                <option value="daily">Daily</option>
+                                <option value="monthly">Monthly</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="intervalCount">Every N Intervals</label>
+                            <input type="number" id="intervalCount" name="intervalCount" value="1" min="1">
+                            <small>E.g., "2" for every 2 weeks</small>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="startDate">Start Date</label>
+                            <input type="date" id="startDate" name="startDate">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="endDate">End Date</label>
+                            <input type="date" id="endDate" name="endDate">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Seasonal Fields -->
+                <div id="seasonal-fields" class="schedule-fields" style="display:none;">
+                    <div class="form-group">
+                        <label>Seasons (check all that apply)</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="seasons" value="spring"> Spring</label>
+                            <label><input type="checkbox" name="seasons" value="summer"> Summer</label>
+                            <label><input type="checkbox" name="seasons" value="fall"> Fall</label>
+                            <label><input type="checkbox" name="seasons" value="winter"> Winter</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="weekInterval">Repeat Every N Weeks During Season</label>
+                        <input type="number" id="weekInterval" name="weekInterval" value="1" min="1">
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Details (Optional)</legend>
+
+                <div class="form-group">
+                    <label for="instructions">Instructions</label>
+                    <textarea id="instructions" name="instructions" rows="3" placeholder="Step-by-step instructions for completing this task"></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="estimatedMinutes">Estimated Time (minutes)</label>
+                        <input type="number" id="estimatedMinutes" name="estimatedMinutes" placeholder="30">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="supplies">Supplies Needed</label>
+                        <input type="text" id="supplies" name="supplies" placeholder="watering can, hose, fertilizer">
+                        <small>Comma-separated list</small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="notes">Notes</label>
+                    <textarea id="notes" name="notes" rows="2" placeholder="Any additional notes"></textarea>
+                </div>
+            </fieldset>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-success">Add Task</button>
+                <button type="reset" class="btn btn-secondary">Reset Form</button>
+                <a href="/tasks.html" class="btn btn-secondary">Cancel</a>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function updateScheduleFields(type) {
+            document.getElementById('one-time-fields').style.display = type === 'one-time' ? 'block' : 'none';
+            document.getElementById('calendar-fields').style.display = type === 'calendar' ? 'block' : 'none';
+            document.getElementById('seasonal-fields').style.display = type === 'seasonal' ? 'block' : 'none';
+        }
+
+        // Reset response message on form reset
+        document.querySelector('form').addEventListener('reset', function() {
+            document.getElementById('response-message').innerHTML = '';
+        });
+
+        // Listen for successful submission
+        document.body.addEventListener('htmx:afterRequest', function(event) {
+            if (event.detail.successful) {
+                setTimeout(() => {
+                    document.querySelector('form').reset();
+                }, 2000);
+            }
+        });
+    </script>
+</body>
+</html>

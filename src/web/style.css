@@ -104,9 +104,47 @@ nav {
     background-color: #5a6268;
 }
 
-/* Search */
+/* Search and Filters */
 .search-section {
     margin-bottom: 20px;
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.filter-select {
+    padding: 10px;
+    border: 2px solid var(--border);
+    border-radius: 5px;
+    font-size: 1em;
+    background: white;
+    cursor: pointer;
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.checkbox-group {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: normal;
+}
+
+.schedule-fields {
+    margin-top: 15px;
 }
 
 .search-input {

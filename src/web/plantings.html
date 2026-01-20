@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garden Plantings - Hillebrecht Garden</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌿 Garden Plantings</h1>
+            <p class="subtitle">Track what's growing in your garden</p>
+        </header>
+
+        <nav>
+            <a href="/" class="btn btn-primary">Plants</a>
+            <a href="/plantings.html" class="btn btn-primary active">Plantings</a>
+            <a href="/tasks.html" class="btn btn-primary">Tasks</a>
+            <a href="/add-planting.html" class="btn btn-success">+ Add Planting</a>
+        </nav>
+
+        <div class="filters">
+            <select
+                id="season-filter"
+                hx-get="/api/plantings"
+                hx-trigger="change"
+                hx-target="#planting-table-body"
+                hx-include="[name='season'],[name='year']"
+                name="season"
+                class="filter-select"
+            >
+                <option value="">All Seasons</option>
+                <option value="spring">Spring</option>
+                <option value="summer">Summer</option>
+                <option value="fall">Fall</option>
+                <option value="winter">Winter</option>
+            </select>
+
+            <input
+                type="number"
+                id="year-filter"
+                name="year"
+                placeholder="Year"
+                value="2026"
+                hx-get="/api/plantings"
+                hx-trigger="change"
+                hx-target="#planting-table-body"
+                hx-include="[name='season'],[name='year']"
+                class="filter-select"
+                style="width: 100px;"
+            >
+
+            <select
+                id="status-filter"
+                hx-get="/api/plantings"
+                hx-trigger="change"
+                hx-target="#planting-table-body"
+                hx-include="[name='status']"
+                name="status"
+                class="filter-select"
+            >
+                <option value="">All Statuses</option>
+                <option value="planned">Planned</option>
+                <option value="seeds-started">Seeds Started</option>
+                <option value="planted">Planted</option>
+                <option value="growing" selected>Growing</option>
+                <option value="harvesting">Harvesting</option>
+                <option value="finished">Finished</option>
+            </select>
+        </div>
+
+        <div class="table-container">
+            <table class="plant-table">
+                <thead>
+                    <tr>
+                        <th>Plant</th>
+                        <th>Location</th>
+                        <th>Quantity</th>
+                        <th>Season/Year</th>
+                        <th>Status</th>
+                        <th>Key Dates</th>
+                    </tr>
+                </thead>
+                <tbody
+                    id="planting-table-body"
+                    hx-get="/api/plantings?year=2026&status=growing"
+                    hx-trigger="load, plantingUpdated from:body"
+                    hx-swap="innerHTML"
+                >
+                    <tr>
+                        <td colspan="6" class="loading">Loading plantings...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <footer>
+            <p><a href="https://github.com/anthropics/claude-code" target="_blank">Powered by Claude Code</a></p>
+        </footer>
+    </div>
+</body>
+</html>
