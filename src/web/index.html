@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hillebrecht Garden - Plant Database</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌱 Hillebrecht Garden</h1>
+            <p class="subtitle">Plant Database Management</p>
+        </header>
+
+        <nav>
+            <a href="/" class="btn btn-primary active">Plant List</a>
+            <a href="/add-plant.html" class="btn btn-success">+ Add Plant</a>
+        </nav>
+
+        <div class="search-section">
+            <input
+                type="text"
+                id="search"
+                placeholder="Search plants by name or variety..."
+                hx-get="/api/plants"
+                hx-trigger="keyup changed delay:300ms"
+                hx-target="#plant-table-body"
+                hx-include="[name='q']"
+                name="q"
+                class="search-input"
+            >
+        </div>
+
+        <div class="table-container">
+            <table class="plant-table">
+                <thead>
+                    <tr>
+                        <th>Common Name</th>
+                        <th>Variety</th>
+                        <th>Lifecycle</th>
+                        <th>Purpose</th>
+                        <th>Tags</th>
+                        <th>Source</th>
+                    </tr>
+                </thead>
+                <tbody
+                    id="plant-table-body"
+                    hx-get="/api/plants"
+                    hx-trigger="load, plantAdded from:body"
+                    hx-swap="innerHTML"
+                >
+                    <tr>
+                        <td colspan="6" class="loading">Loading plants...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <footer>
+            <p>Total plants will load dynamically | <a href="https://github.com/anthropics/claude-code" target="_blank">Powered by Claude Code</a></p>
+        </footer>
+    </div>
+</body>
+</html>

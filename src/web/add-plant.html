@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Plant - Hillebrecht Garden</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌱 Add New Plant</h1>
+            <p class="subtitle">Fill in as much information as you have available</p>
+        </header>
+
+        <nav>
+            <a href="/" class="btn btn-primary">← Back to Plant List</a>
+        </nav>
+
+        <div id="response-message"></div>
+
+        <form
+            class="plant-form"
+            hx-post="/api/plants"
+            hx-target="#response-message"
+            hx-swap="innerHTML"
+        >
+            <fieldset>
+                <legend>Basic Information (Required)</legend>
+
+                <div class="form-group">
+                    <label for="commonName">Common Name *</label>
+                    <input type="text" id="commonName" name="commonName" required placeholder="e.g., Tomato">
+                </div>
+
+                <div class="form-group">
+                    <label for="variety">Variety *</label>
+                    <input type="text" id="variety" name="variety" required placeholder="e.g., Cherokee Purple">
+                </div>
+
+                <div class="form-group">
+                    <label for="scientificName">Scientific Name</label>
+                    <input type="text" id="scientificName" name="scientificName" placeholder="e.g., Solanum lycopersicum">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Growing Requirements</legend>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="daysToMaturity">Days to Maturity</label>
+                        <input type="number" id="daysToMaturity" name="daysToMaturity" placeholder="60">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="spacingInches">Spacing (inches)</label>
+                        <input type="number" id="spacingInches" name="spacingInches" placeholder="12">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="sunRequirement">Sun Requirement</label>
+                        <select id="sunRequirement" name="sunRequirement">
+                            <option value="">-- Default: Full Sun --</option>
+                            <option value="full-sun">Full Sun</option>
+                            <option value="partial-sun">Partial Sun</option>
+                            <option value="partial-shade">Partial Shade</option>
+                            <option value="full-shade">Full Shade</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="waterRequirement">Water Requirement</label>
+                        <select id="waterRequirement" name="waterRequirement">
+                            <option value="">-- Default: Moderate --</option>
+                            <option value="low">Low</option>
+                            <option value="moderate">Moderate</option>
+                            <option value="high">High</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Planting Information</legend>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="plantingMethod">Planting Method</label>
+                        <select id="plantingMethod" name="plantingMethod">
+                            <option value="">-- Default: Either --</option>
+                            <option value="direct-seed">Direct Seed</option>
+                            <option value="transplant">Transplant</option>
+                            <option value="either">Either</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="frostTolerance">Frost Tolerance</label>
+                        <select id="frostTolerance" name="frostTolerance">
+                            <option value="">-- Default: Tender --</option>
+                            <option value="tender">Tender</option>
+                            <option value="half-hardy">Half-Hardy</option>
+                            <option value="hardy">Hardy</option>
+                            <option value="very-hardy">Very Hardy</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="seedDepthInches">Seed Depth (inches)</label>
+                        <input type="number" step="0.1" id="seedDepthInches" name="seedDepthInches" placeholder="0.25">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="germinationDays">Germination Days</label>
+                        <input type="number" id="germinationDays" name="germinationDays" placeholder="10">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="indoorStartWeeksBeforeFrost">Indoor Start (weeks before last frost)</label>
+                    <input type="number" id="indoorStartWeeksBeforeFrost" name="indoorStartWeeksBeforeFrost" placeholder="6">
+                    <small>Leave blank if not applicable</small>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Source & Tags</legend>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="source">Source/Distributor</label>
+                        <input type="text" id="source" name="source" placeholder="e.g., Baker Creek Heirloom Seeds">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="productId">Product ID</label>
+                        <input type="text" id="productId" name="productId" placeholder="e.g., #TOM12">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="tags">Tags (comma-separated)</label>
+                    <input type="text" id="tags" name="tags" placeholder="annual, food, heirloom, nightshade">
+                    <small>Common tags: annual, perennial, biennial, food, flower, medicinal, heirloom</small>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Notes</legend>
+
+                <div class="form-group">
+                    <label for="notes">Additional Notes</label>
+                    <textarea id="notes" name="notes" rows="4" placeholder="Any additional information about this plant..."></textarea>
+                </div>
+            </fieldset>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-success">Add Plant</button>
+                <button type="reset" class="btn btn-secondary">Reset Form</button>
+                <a href="/" class="btn btn-secondary">Cancel</a>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Reset response message on form reset
+        document.querySelector('form').addEventListener('reset', function() {
+            document.getElementById('response-message').innerHTML = '';
+        });
+
+        // Listen for successful submission
+        document.body.addEventListener('htmx:afterRequest', function(event) {
+            if (event.detail.successful) {
+                // Clear form after successful submission
+                setTimeout(() => {
+                    document.querySelector('form').reset();
+                }, 2000);
+            }
+        });
+    </script>
+</body>
+</html>
