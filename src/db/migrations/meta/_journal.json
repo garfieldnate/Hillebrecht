@@ -15,6 +15,13 @@
       "when": 1768879660137,
       "tag": "0001_illegal_corsair",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1768883936678,
+      "tag": "0002_mature_apocalypse",
+      "breakpoints": true
     }
   ]
 }

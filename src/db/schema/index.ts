@@ -5,3 +5,4 @@
 
 export * from "./plants.schema.ts";
 export * from "./plantings.schema.ts";
+export * from "./tasks.schema.ts";

@@ -1,0 +1,1297 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Hillebrecht Garden//Task Manager//EN
+X-WR-CALNAME:Garden Tasks - Fall 2026
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-09-01-1@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260901
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-09-02-2@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260902
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-09-03-3@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260903
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-09-04-4@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260904
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-09-05-5@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260905
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-09-06-6@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260906
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-09-07-7@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260907
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-09-08-8@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260908
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-09-09-9@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260909
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-09-10-10@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260910
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-09-11-11@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260911
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-09-12-12@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260912
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-09-13-13@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260913
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-09-14-14@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260914
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-09-15-15@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260915
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-09-16-16@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260916
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-09-17-17@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260917
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-09-18-18@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260918
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-09-19-19@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260919
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-09-20-20@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260920
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-09-21-21@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260921
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-09-22-22@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260922
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-09-23-23@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260923
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-09-24-24@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260924
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-09-25-25@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260925
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-09-26-26@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260926
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-09-27-27@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260927
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-09-28-28@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260928
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-09-29-29@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260929
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-09-30-30@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260930
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-10-01-31@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261001
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-10-02-32@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261002
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-10-03-33@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261003
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-10-04-34@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261004
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-10-05-35@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261005
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-10-06-36@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261006
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-10-07-37@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261007
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-10-08-38@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261008
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-10-09-39@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261009
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-10-10-40@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261010
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-10-11-41@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261011
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-10-12-42@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261012
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-10-13-43@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261013
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-10-14-44@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261014
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-10-15-45@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261015
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-10-16-46@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261016
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-10-17-47@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261017
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-10-18-48@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261018
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-10-19-49@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261019
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-10-20-50@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261020
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-10-21-51@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261021
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-10-22-52@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261022
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-10-23-53@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261023
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-10-24-54@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261024
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-10-25-55@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261025
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-10-26-56@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261026
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-10-27-57@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261027
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-10-28-58@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261028
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-10-29-59@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261029
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-10-30-60@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261030
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:water-greenhouse-daily-2026-10-31-61@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261031
+SUMMARY:Water Greenhouse Plants
+DESCRIPTION:Water all greenhouse plants thoroughly\nCategory: watering
+PRIORITY:3
+CATEGORIES:watering
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Water Greenhouse Plants
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:fertilize-tomatoes-biweekly-2026-09-08-1@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260908
+SUMMARY:Fertilize Tomatoes
+DESCRIPTION:Apply liquid fertilizer to all tomato plants\nCategory: fertilization
+PRIORITY:5
+CATEGORIES:fertilization
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Fertilize Tomatoes
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:fertilize-tomatoes-biweekly-2026-09-22-2@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260922
+SUMMARY:Fertilize Tomatoes
+DESCRIPTION:Apply liquid fertilizer to all tomato plants\nCategory: fertilization
+PRIORITY:5
+CATEGORIES:fertilization
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Fertilize Tomatoes
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:check-pest-traps-weekly-2026-09-05-1@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260905
+SUMMARY:Check Pest Traps
+DESCRIPTION:Inspect and replace pest monitoring traps\nCategory: pest-management
+PRIORITY:3
+CATEGORIES:pest-management
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Check Pest Traps
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:check-pest-traps-weekly-2026-09-12-2@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260912
+SUMMARY:Check Pest Traps
+DESCRIPTION:Inspect and replace pest monitoring traps\nCategory: pest-management
+PRIORITY:3
+CATEGORIES:pest-management
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Check Pest Traps
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:check-pest-traps-weekly-2026-09-19-3@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260919
+SUMMARY:Check Pest Traps
+DESCRIPTION:Inspect and replace pest monitoring traps\nCategory: pest-management
+PRIORITY:3
+CATEGORIES:pest-management
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Check Pest Traps
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:check-pest-traps-weekly-2026-09-26-4@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260926
+SUMMARY:Check Pest Traps
+DESCRIPTION:Inspect and replace pest monitoring traps\nCategory: pest-management
+PRIORITY:3
+CATEGORIES:pest-management
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Check Pest Traps
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:check-pest-traps-weekly-2026-10-03-5@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261003
+SUMMARY:Check Pest Traps
+DESCRIPTION:Inspect and replace pest monitoring traps\nCategory: pest-management
+PRIORITY:3
+CATEGORIES:pest-management
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Check Pest Traps
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:check-pest-traps-weekly-2026-10-10-6@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261010
+SUMMARY:Check Pest Traps
+DESCRIPTION:Inspect and replace pest monitoring traps\nCategory: pest-management
+PRIORITY:3
+CATEGORIES:pest-management
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Check Pest Traps
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:check-pest-traps-weekly-2026-10-17-7@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261017
+SUMMARY:Check Pest Traps
+DESCRIPTION:Inspect and replace pest monitoring traps\nCategory: pest-management
+PRIORITY:3
+CATEGORIES:pest-management
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Check Pest Traps
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:check-pest-traps-weekly-2026-10-24-8@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261024
+SUMMARY:Check Pest Traps
+DESCRIPTION:Inspect and replace pest monitoring traps\nCategory: pest-management
+PRIORITY:3
+CATEGORIES:pest-management
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Check Pest Traps
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:check-pest-traps-weekly-2026-10-31-9@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261031
+SUMMARY:Check Pest Traps
+DESCRIPTION:Inspect and replace pest monitoring traps\nCategory: pest-management
+PRIORITY:3
+CATEGORIES:pest-management
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Check Pest Traps
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:harvest-salad-greens-spring-2026-09-22-1@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260922
+SUMMARY:Harvest Salad Greens
+DESCRIPTION:Harvest mature salad greens using cut-and-come-again method\nCategory: harvest
+PRIORITY:5
+CATEGORIES:harvest
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Harvest Salad Greens
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:harvest-salad-greens-spring-2026-09-29-2@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260929
+SUMMARY:Harvest Salad Greens
+DESCRIPTION:Harvest mature salad greens using cut-and-come-again method\nCategory: harvest
+PRIORITY:5
+CATEGORIES:harvest
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Harvest Salad Greens
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:harvest-salad-greens-spring-2026-10-06-3@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261006
+SUMMARY:Harvest Salad Greens
+DESCRIPTION:Harvest mature salad greens using cut-and-come-again method\nCategory: harvest
+PRIORITY:5
+CATEGORIES:harvest
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Harvest Salad Greens
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:harvest-salad-greens-spring-2026-10-13-4@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261013
+SUMMARY:Harvest Salad Greens
+DESCRIPTION:Harvest mature salad greens using cut-and-come-again method\nCategory: harvest
+PRIORITY:5
+CATEGORIES:harvest
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Harvest Salad Greens
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:harvest-salad-greens-spring-2026-10-20-5@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261020
+SUMMARY:Harvest Salad Greens
+DESCRIPTION:Harvest mature salad greens using cut-and-come-again method\nCategory: harvest
+PRIORITY:5
+CATEGORIES:harvest
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Harvest Salad Greens
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:harvest-salad-greens-spring-2026-10-27-6@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261027
+SUMMARY:Harvest Salad Greens
+DESCRIPTION:Harvest mature salad greens using cut-and-come-again method\nCategory: harvest
+PRIORITY:5
+CATEGORIES:harvest
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Harvest Salad Greens
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:harvest-salad-greens-spring-2026-11-03-7@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261103
+SUMMARY:Harvest Salad Greens
+DESCRIPTION:Harvest mature salad greens using cut-and-come-again method\nCategory: harvest
+PRIORITY:5
+CATEGORIES:harvest
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Harvest Salad Greens
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:harvest-salad-greens-spring-2026-11-10-8@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261110
+SUMMARY:Harvest Salad Greens
+DESCRIPTION:Harvest mature salad greens using cut-and-come-again method\nCategory: harvest
+PRIORITY:5
+CATEGORIES:harvest
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Harvest Salad Greens
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:harvest-salad-greens-spring-2026-11-17-9@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261117
+SUMMARY:Harvest Salad Greens
+DESCRIPTION:Harvest mature salad greens using cut-and-come-again method\nCategory: harvest
+PRIORITY:5
+CATEGORIES:harvest
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Harvest Salad Greens
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:harvest-salad-greens-spring-2026-11-24-10@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261124
+SUMMARY:Harvest Salad Greens
+DESCRIPTION:Harvest mature salad greens using cut-and-come-again method\nCategory: harvest
+PRIORITY:5
+CATEGORIES:harvest
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Harvest Salad Greens
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:spring-garden-cleanup-2026-2026-04-01-1@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260401
+SUMMARY:Spring Garden Cleanup
+DESCRIPTION:Remove winter mulch\, clean beds\, prepare for planting\nCategory: maintenance
+PRIORITY:3
+CATEGORIES:maintenance
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Spring Garden Cleanup
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:tool-maintenance-monthly-2026-09-16-1@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260916
+SUMMARY:Clean and Sharpen Tools
+DESCRIPTION:Clean\, sharpen\, and oil garden tools\nCategory: maintenance
+PRIORITY:9
+CATEGORIES:maintenance
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Clean and Sharpen Tools
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:tool-maintenance-monthly-2026-10-16-2@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261016
+SUMMARY:Clean and Sharpen Tools
+DESCRIPTION:Clean\, sharpen\, and oil garden tools\nCategory: maintenance
+PRIORITY:9
+CATEGORIES:maintenance
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Clean and Sharpen Tools
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:tool-maintenance-monthly-2026-11-16-3@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261116
+SUMMARY:Clean and Sharpen Tools
+DESCRIPTION:Clean\, sharpen\, and oil garden tools\nCategory: maintenance
+PRIORITY:9
+CATEGORIES:maintenance
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Clean and Sharpen Tools
+END:VALARM
+END:VEVENT
+END:VCALENDAR

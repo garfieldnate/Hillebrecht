@@ -1,0 +1,172 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Hillebrecht Garden//Task Manager//EN
+X-WR-CALNAME:Garden Maintenance 2026
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:spring-garden-cleanup-2026-2026-04-01-1@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260401
+SUMMARY:Spring Garden Cleanup
+DESCRIPTION:Remove winter mulch\, clean beds\, prepare for planting\nCategory: maintenance
+PRIORITY:3
+CATEGORIES:maintenance
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Spring Garden Cleanup
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:tool-maintenance-monthly-2026-04-16-1@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260416
+SUMMARY:Clean and Sharpen Tools
+DESCRIPTION:Clean\, sharpen\, and oil garden tools\nCategory: maintenance
+PRIORITY:9
+CATEGORIES:maintenance
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Clean and Sharpen Tools
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:tool-maintenance-monthly-2026-05-16-2@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260516
+SUMMARY:Clean and Sharpen Tools
+DESCRIPTION:Clean\, sharpen\, and oil garden tools\nCategory: maintenance
+PRIORITY:9
+CATEGORIES:maintenance
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Clean and Sharpen Tools
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:tool-maintenance-monthly-2026-06-16-1@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260616
+SUMMARY:Clean and Sharpen Tools
+DESCRIPTION:Clean\, sharpen\, and oil garden tools\nCategory: maintenance
+PRIORITY:9
+CATEGORIES:maintenance
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Clean and Sharpen Tools
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mulch-beds-summer-2026-06-21-1@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260621
+SUMMARY:Refresh Mulch
+DESCRIPTION:Add fresh mulch to garden beds\nCategory: maintenance
+PRIORITY:5
+CATEGORIES:maintenance
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Refresh Mulch
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:tool-maintenance-monthly-2026-07-16-2@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260716
+SUMMARY:Clean and Sharpen Tools
+DESCRIPTION:Clean\, sharpen\, and oil garden tools\nCategory: maintenance
+PRIORITY:9
+CATEGORIES:maintenance
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Clean and Sharpen Tools
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mulch-beds-summer-2026-08-16-2@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260816
+SUMMARY:Refresh Mulch
+DESCRIPTION:Add fresh mulch to garden beds\nCategory: maintenance
+PRIORITY:5
+CATEGORIES:maintenance
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Refresh Mulch
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:tool-maintenance-monthly-2026-08-16-3@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260816
+SUMMARY:Clean and Sharpen Tools
+DESCRIPTION:Clean\, sharpen\, and oil garden tools\nCategory: maintenance
+PRIORITY:9
+CATEGORIES:maintenance
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Clean and Sharpen Tools
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:tool-maintenance-monthly-2026-09-16-1@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260916
+SUMMARY:Clean and Sharpen Tools
+DESCRIPTION:Clean\, sharpen\, and oil garden tools\nCategory: maintenance
+PRIORITY:9
+CATEGORIES:maintenance
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Clean and Sharpen Tools
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:tool-maintenance-monthly-2026-10-16-2@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261016
+SUMMARY:Clean and Sharpen Tools
+DESCRIPTION:Clean\, sharpen\, and oil garden tools\nCategory: maintenance
+PRIORITY:9
+CATEGORIES:maintenance
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Clean and Sharpen Tools
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:tool-maintenance-monthly-2026-11-16-3@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261116
+SUMMARY:Clean and Sharpen Tools
+DESCRIPTION:Clean\, sharpen\, and oil garden tools\nCategory: maintenance
+PRIORITY:9
+CATEGORIES:maintenance
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Clean and Sharpen Tools
+END:VALARM
+END:VEVENT
+END:VCALENDAR

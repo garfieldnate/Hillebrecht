@@ -1,0 +1,367 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Hillebrecht Garden//Task Manager//EN
+X-WR-CALNAME:Garden Harvest 2026
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:harvest-salad-greens-spring-2026-03-20-1@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260320
+SUMMARY:Harvest Salad Greens
+DESCRIPTION:Harvest mature salad greens using cut-and-come-again method\nCategory: harvest
+PRIORITY:5
+CATEGORIES:harvest
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Harvest Salad Greens
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:harvest-salad-greens-spring-2026-03-27-2@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260327
+SUMMARY:Harvest Salad Greens
+DESCRIPTION:Harvest mature salad greens using cut-and-come-again method\nCategory: harvest
+PRIORITY:5
+CATEGORIES:harvest
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Harvest Salad Greens
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:harvest-salad-greens-spring-2026-04-03-3@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260403
+SUMMARY:Harvest Salad Greens
+DESCRIPTION:Harvest mature salad greens using cut-and-come-again method\nCategory: harvest
+PRIORITY:5
+CATEGORIES:harvest
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Harvest Salad Greens
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:harvest-salad-greens-spring-2026-04-10-4@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260410
+SUMMARY:Harvest Salad Greens
+DESCRIPTION:Harvest mature salad greens using cut-and-come-again method\nCategory: harvest
+PRIORITY:5
+CATEGORIES:harvest
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Harvest Salad Greens
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:harvest-salad-greens-spring-2026-04-17-5@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260417
+SUMMARY:Harvest Salad Greens
+DESCRIPTION:Harvest mature salad greens using cut-and-come-again method\nCategory: harvest
+PRIORITY:5
+CATEGORIES:harvest
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Harvest Salad Greens
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:harvest-salad-greens-spring-2026-04-24-6@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260424
+SUMMARY:Harvest Salad Greens
+DESCRIPTION:Harvest mature salad greens using cut-and-come-again method\nCategory: harvest
+PRIORITY:5
+CATEGORIES:harvest
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Harvest Salad Greens
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:harvest-salad-greens-spring-2026-05-01-7@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260501
+SUMMARY:Harvest Salad Greens
+DESCRIPTION:Harvest mature salad greens using cut-and-come-again method\nCategory: harvest
+PRIORITY:5
+CATEGORIES:harvest
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Harvest Salad Greens
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:harvest-salad-greens-spring-2026-05-08-8@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260508
+SUMMARY:Harvest Salad Greens
+DESCRIPTION:Harvest mature salad greens using cut-and-come-again method\nCategory: harvest
+PRIORITY:5
+CATEGORIES:harvest
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Harvest Salad Greens
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:harvest-salad-greens-spring-2026-05-15-9@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260515
+SUMMARY:Harvest Salad Greens
+DESCRIPTION:Harvest mature salad greens using cut-and-come-again method\nCategory: harvest
+PRIORITY:5
+CATEGORIES:harvest
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Harvest Salad Greens
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:harvest-salad-greens-spring-2026-05-22-10@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260522
+SUMMARY:Harvest Salad Greens
+DESCRIPTION:Harvest mature salad greens using cut-and-come-again method\nCategory: harvest
+PRIORITY:5
+CATEGORIES:harvest
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Harvest Salad Greens
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:harvest-salad-greens-spring-2026-05-29-11@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260529
+SUMMARY:Harvest Salad Greens
+DESCRIPTION:Harvest mature salad greens using cut-and-come-again method\nCategory: harvest
+PRIORITY:5
+CATEGORIES:harvest
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Harvest Salad Greens
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:harvest-salad-greens-spring-2026-06-05-1@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260605
+SUMMARY:Harvest Salad Greens
+DESCRIPTION:Harvest mature salad greens using cut-and-come-again method\nCategory: harvest
+PRIORITY:5
+CATEGORIES:harvest
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Harvest Salad Greens
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:harvest-salad-greens-spring-2026-06-12-2@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260612
+SUMMARY:Harvest Salad Greens
+DESCRIPTION:Harvest mature salad greens using cut-and-come-again method\nCategory: harvest
+PRIORITY:5
+CATEGORIES:harvest
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Harvest Salad Greens
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:harvest-salad-greens-spring-2026-06-19-3@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260619
+SUMMARY:Harvest Salad Greens
+DESCRIPTION:Harvest mature salad greens using cut-and-come-again method\nCategory: harvest
+PRIORITY:5
+CATEGORIES:harvest
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Harvest Salad Greens
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:harvest-salad-greens-spring-2026-09-22-1@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260922
+SUMMARY:Harvest Salad Greens
+DESCRIPTION:Harvest mature salad greens using cut-and-come-again method\nCategory: harvest
+PRIORITY:5
+CATEGORIES:harvest
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Harvest Salad Greens
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:harvest-salad-greens-spring-2026-09-29-2@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20260929
+SUMMARY:Harvest Salad Greens
+DESCRIPTION:Harvest mature salad greens using cut-and-come-again method\nCategory: harvest
+PRIORITY:5
+CATEGORIES:harvest
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Harvest Salad Greens
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:harvest-salad-greens-spring-2026-10-06-3@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261006
+SUMMARY:Harvest Salad Greens
+DESCRIPTION:Harvest mature salad greens using cut-and-come-again method\nCategory: harvest
+PRIORITY:5
+CATEGORIES:harvest
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Harvest Salad Greens
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:harvest-salad-greens-spring-2026-10-13-4@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261013
+SUMMARY:Harvest Salad Greens
+DESCRIPTION:Harvest mature salad greens using cut-and-come-again method\nCategory: harvest
+PRIORITY:5
+CATEGORIES:harvest
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Harvest Salad Greens
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:harvest-salad-greens-spring-2026-10-20-5@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261020
+SUMMARY:Harvest Salad Greens
+DESCRIPTION:Harvest mature salad greens using cut-and-come-again method\nCategory: harvest
+PRIORITY:5
+CATEGORIES:harvest
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Harvest Salad Greens
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:harvest-salad-greens-spring-2026-10-27-6@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261027
+SUMMARY:Harvest Salad Greens
+DESCRIPTION:Harvest mature salad greens using cut-and-come-again method\nCategory: harvest
+PRIORITY:5
+CATEGORIES:harvest
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Harvest Salad Greens
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:harvest-salad-greens-spring-2026-11-03-7@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261103
+SUMMARY:Harvest Salad Greens
+DESCRIPTION:Harvest mature salad greens using cut-and-come-again method\nCategory: harvest
+PRIORITY:5
+CATEGORIES:harvest
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Harvest Salad Greens
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:harvest-salad-greens-spring-2026-11-10-8@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261110
+SUMMARY:Harvest Salad Greens
+DESCRIPTION:Harvest mature salad greens using cut-and-come-again method\nCategory: harvest
+PRIORITY:5
+CATEGORIES:harvest
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Harvest Salad Greens
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:harvest-salad-greens-spring-2026-11-17-9@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261117
+SUMMARY:Harvest Salad Greens
+DESCRIPTION:Harvest mature salad greens using cut-and-come-again method\nCategory: harvest
+PRIORITY:5
+CATEGORIES:harvest
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Harvest Salad Greens
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:harvest-salad-greens-spring-2026-11-24-10@hillebrecht-garden
+DTSTAMP:20260120T044659Z
+DTSTART;VALUE=DATE:20261124
+SUMMARY:Harvest Salad Greens
+DESCRIPTION:Harvest mature salad greens using cut-and-come-again method\nCategory: harvest
+PRIORITY:5
+CATEGORIES:harvest
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Harvest Salad Greens
+END:VALARM
+END:VEVENT
+END:VCALENDAR
