@@ -5,6 +5,7 @@ import type {
   PlantingLocation,
   PlantingQuantity,
   PlantingResults,
+  TreeDetails,
 } from "../../types/planting.types.ts";
 
 /**
@@ -55,6 +56,9 @@ export const plantings = sqliteTable(
 
     // Results (stored as JSON, optional)
     results: text("results", { mode: "json" }).$type<PlantingResults>(),
+
+    // Tree-specific data (stored as JSON, optional)
+    treeDetails: text("tree_details", { mode: "json" }).$type<TreeDetails>(),
 
     // General notes
     notes: text("notes"),

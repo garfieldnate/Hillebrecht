@@ -8,6 +8,13 @@
       "when": 1768805372072,
       "tag": "0000_slippery_ghost_rider",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1768879660137,
+      "tag": "0001_illegal_corsair",
+      "breakpoints": true
     }
   ]
 }

@@ -7,7 +7,7 @@ import { db } from "../client.ts";
 import { plantings } from "../schema/index.ts";
 import { eq, and, sql } from "drizzle-orm";
 import { type PlantingStatus, Season } from "../../types/common.types.ts";
-import type { PlannedPlanting } from "../../types/planting.types.ts";
+import type { PlannedPlanting, TreeYearlyData, PruningEvent } from "../../types/planting.types.ts";
 
 /**
  * Get all plantings for a specific season
@@ -150,6 +150,7 @@ export async function addPlanting(planting: PlannedPlanting): Promise<void> {
     quantity: planting.quantity,
     status: planting.status,
     results: planting.results,
+    treeDetails: planting.treeDetails,
     notes: planting.notes,
     metadata: planting.metadata,
   });
@@ -189,4 +190,93 @@ export async function deletePlanting(id: string): Promise<boolean> {
 
   await db.delete(plantings).where(eq(plantings.id, id));
   return true;
+}
+
+// ============================================================================
+// Tree-specific query functions
+// ============================================================================
+
+/**
+ * Get all tree plantings (plantings with treeDetails)
+ */
+export async function getTreePlantings(): Promise<PlannedPlanting[]> {
+  const results = await db
+    .select()
+    .from(plantings)
+    .where(sql`${plantings.treeDetails} IS NOT NULL`);
+
+  return results as PlannedPlanting[];
+}
+
+/**
+ * Get trees by rootstock type
+ */
+export async function getTreesByRootstock(rootstockName: string): Promise<PlannedPlanting[]> {
+  const results = await db
+    .select()
+    .from(plantings)
+    .where(sql`json_extract(${plantings.treeDetails}, '$.rootstock.name') = ${rootstockName}`);
+
+  return results as PlannedPlanting[];
+}
+
+/**
+ * Add yearly data to a tree
+ */
+export async function addTreeYearlyData(
+  treeId: string,
+  yearData: TreeYearlyData
+): Promise<PlannedPlanting | undefined> {
+  const tree = await getPlantingById(treeId);
+  if (!tree || !tree.treeDetails) {
+    return undefined;
+  }
+
+  const updatedYearlyData = [
+    ...(tree.treeDetails.yearlyData || []),
+    yearData
+  ];
+
+  return updatePlanting(treeId, {
+    treeDetails: {
+      ...tree.treeDetails,
+      yearlyData: updatedYearlyData
+    }
+  });
+}
+
+/**
+ * Add pruning event to a tree's current year
+ */
+export async function addPruningEvent(
+  treeId: string,
+  year: number,
+  pruningEvent: PruningEvent
+): Promise<PlannedPlanting | undefined> {
+  const tree = await getPlantingById(treeId);
+  if (!tree || !tree.treeDetails) {
+    return undefined;
+  }
+
+  const yearlyData = tree.treeDetails.yearlyData || [];
+  const yearIndex = yearlyData.findIndex(yd => yd.year === year);
+
+  if (yearIndex === -1) {
+    // Create new year entry
+    yearlyData.push({
+      year,
+      pruningEvents: [pruningEvent]
+    });
+  } else {
+    // Add to existing year
+    const existingEvents = yearlyData[yearIndex].pruningEvents || [];
+    yearlyData[yearIndex].pruningEvents = [...existingEvents, pruningEvent];
+  }
+
+  return updatePlanting(treeId, {
+    treeDetails: {
+      ...tree.treeDetails,
+      yearlyData
+    }
+  });
 }

@@ -73,6 +73,16 @@ export const plants = sqliteTable("plants", {
   // Care notes (stored as JSON)
   care: text("care", { mode: "json" }).$type<CareNotes>(),
 
+  // Tree-specific fields (stored as JSON, optional)
+  pollinationInfo: text("pollination_info", { mode: "json" }).$type<{
+    type: "self-fertile" | "self-sterile" | "partially-self-fertile";
+    pollinizers?: string[];
+    bloomTime?: "early" | "mid" | "late";
+    chillHours?: { min: number; max?: number };
+    zones?: string;
+  }>(),
+  rootstockOptions: text("rootstock_options", { mode: "json" }).$type<string[]>(),
+
   // General
   notes: text("notes"),
   metadata: text("metadata", { mode: "json" }).$type<{

@@ -166,6 +166,19 @@ export interface Plant {
   // Care
   care?: CareNotes;
 
+  // Tree-specific fields (optional, only for fruit trees)
+  pollinationInfo?: {
+    type: "self-fertile" | "self-sterile" | "partially-self-fertile";
+    pollinizers?: string[]; // Array of compatible variety IDs
+    bloomTime?: "early" | "mid" | "late"; // For pollination overlap
+    chillHours?: {
+      min: number;
+      max?: number;
+    };
+    zones?: string; // Hardiness zones (e.g., "5-8")
+  };
+  rootstockOptions?: string[]; // Available rootstocks for this variety
+
   // General
   tags?: string[];
   notes?: string;

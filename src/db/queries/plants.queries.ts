@@ -131,6 +131,8 @@ export async function getPlantById(id: string): Promise<Plant | undefined> {
         }))
       : undefined,
     care: plant.care || undefined,
+    pollinationInfo: plant.pollinationInfo || undefined,
+    rootstockOptions: plant.rootstockOptions || undefined,
     tags: tags.length > 0 ? tags.map((t) => t.tag) : undefined,
     notes: plant.notes || undefined,
     metadata: plant.metadata || undefined,
@@ -196,4 +198,46 @@ export async function getAllTags(): Promise<string[]> {
     .orderBy(plantTags.tag);
 
   return results.map((r) => r.tag);
+}
+
+// ============================================================================
+// Tree-specific query functions
+// ============================================================================
+
+/**
+ * Get fruit tree varieties (plants with pollinationInfo)
+ */
+export async function getFruitTreeVarieties(): Promise<Plant[]> {
+  const results = await db
+    .select()
+    .from(plants)
+    .where(sql`${plants.pollinationInfo} IS NOT NULL`);
+
+  const fullPlants: Plant[] = [];
+  for (const result of results) {
+    const plant = await getPlantById(result.id);
+    if (plant) {
+      fullPlants.push(plant);
+    }
+  }
+  return fullPlants;
+}
+
+/**
+ * Get compatible pollinizers for a variety
+ */
+export async function getPollinizers(plantId: string): Promise<Plant[]> {
+  const plant = await getPlantById(plantId);
+  if (!plant?.pollinationInfo?.pollinizers) {
+    return [];
+  }
+
+  const pollinizers: Plant[] = [];
+  for (const pollinizerId of plant.pollinationInfo.pollinizers) {
+    const pollinizer = await getPlantById(pollinizerId);
+    if (pollinizer) {
+      pollinizers.push(pollinizer);
+    }
+  }
+  return pollinizers;
 }
