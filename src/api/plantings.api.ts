@@ -5,7 +5,7 @@
  * A planting is a specific instance of a plant variety in a location.
  */
 
-import { db } from "../db/client.ts";
+import { db } from "../db/client.node.ts";
 import { plantings, plants } from "../db/schema/index.ts";
 import { eq } from "drizzle-orm";
 import type { PlannedPlanting } from "../types/planting.types.ts";

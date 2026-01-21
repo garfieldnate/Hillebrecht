@@ -7,7 +7,7 @@
  * - TaskInstance: Specific occurrences (e.g., "Water tomatoes on June 15")
  */
 
-import { db } from "../db/client.ts";
+import { db } from "../db/client.node.ts";
 import { taskTemplates, taskInstances } from "../db/schema/index.ts";
 import { eq } from "drizzle-orm";
 import type { TaskTemplate, TaskInstance } from "../types/task.types.ts";

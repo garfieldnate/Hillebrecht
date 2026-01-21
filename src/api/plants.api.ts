@@ -11,7 +11,7 @@
  * 4. Call addPlantSimple() with the data
  */
 
-import { db } from "../db/client.ts";
+import { db } from "../db/client.node.ts";
 import { plants, plantTags, plantCompanions } from "../db/schema/index.ts";
 import type { Plant } from "../types/plant.types.ts";
 import {
