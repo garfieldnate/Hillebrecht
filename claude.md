@@ -2,7 +2,13 @@
 
 ## Project Overview
 
-This is a TypeScript-based garden seed inventory and seasonal planting plan management system built for use with Bun. The database uses frost-relative timing to make plant data location-independent.
+This is a TypeScript-based garden seed inventory, task management, and seasonal planting plan management system. The database uses frost-relative timing to make plant data location-independent.
+
+**Key Technologies:**
+- **Database**: SQLite with Drizzle ORM
+- **Runtime**: Bun for web server, Node.js (tsx) for scripts and direct data manipulation
+- **Frontend**: HTMX-based web interface (no heavy frameworks)
+- **APIs**: Simplified, LLM-friendly TypeScript APIs for easy data entry
 
 ## Project Structure
 
@@ -12,13 +18,48 @@ hillebrecht/
 │   ├── types/
 │   │   ├── common.types.ts      # Shared enums and base types
 │   │   ├── plant.types.ts       # Plant interface and related types
-│   │   └── planting.types.ts    # PlannedPlanting interface
-│   └── data/
-│       ├── plants.db.ts         # Plant database array + helper functions
-│       └── plantings.db.ts      # PlannedPlanting database array + helpers
+│   │   ├── planting.types.ts    # Planting interface and related types
+│   │   └── task.types.ts        # Task template and instance types
+│   ├── db/
+│   │   ├── client.ts            # Bun SQLite client (for web server)
+│   │   ├── client.node.ts       # Node.js better-sqlite3 client (for scripts/direct execution)
+│   │   ├── schema/
+│   │   │   ├── plants.schema.ts # Plant table schema
+│   │   │   ├── plantings.schema.ts # Plantings table schema
+│   │   │   ├── tasks.schema.ts  # Task templates and instances schema
+│   │   │   └── index.ts         # Schema exports
+│   │   ├── queries/
+│   │   │   └── tasks.queries.ts # Task query functions
+│   │   └── migrations/          # Drizzle migrations
+│   ├── api/
+│   │   ├── plants.api.ts        # Simplified plant API (LLM-friendly)
+│   │   ├── plantings.api.ts     # Simplified planting API (LLM-friendly)
+│   │   └── tasks.api.ts         # Simplified task API (LLM-friendly)
+│   ├── lib/
+│   │   ├── task-generator.ts    # Task instance generation logic
+│   │   └── icalendar-export.ts  # Calendar export functionality
+│   ├── web/
+│   │   ├── index.html           # Main navigation page
+│   │   ├── plants.html          # Plant list interface
+│   │   ├── add-plant.html       # Add plant form
+│   │   ├── tasks.html           # Task list interface
+│   │   ├── add-task.html        # Add task form
+│   │   ├── plantings.html       # Planting list interface
+│   │   ├── add-planting.html    # Add planting form
+│   │   └── style.css            # Shared styles
+│   └── scripts/
+│       ├── add-example-tasks.ts # Example task templates
+│       ├── generate-task-schedule.ts # Generate task schedule
+│       └── test-task-system.ts  # Task system tests
+├── data/                         # SQLite database files
+│   └── garden.db
+├── calendar-exports/             # Generated .ics calendar files
 ├── package.json                  # Using pnpm as package manager
 ├── tsconfig.json
-└── README.md
+├── LLM_PLANT_GUIDE.md           # Complete guide for adding plants
+├── LLM_TASKS_GUIDE.md           # Complete guide for adding tasks
+├── LLM_PLANTINGS_GUIDE.md       # Complete guide for tracking plantings
+└── WEB_INTERFACE_README.md      # Web interface documentation
 ```
 
 ## User Preferences
@@ -142,23 +183,153 @@ germinationRequirements: {
 }
 ```
 
-## Database Helper Functions
+## Database Architecture
 
-### plants.db.ts
-- `getPlantById(id: string)` - Find specific plant
-- `searchPlants(query: string)` - Search by name/variety
-- `getPlantsByTag(tag: string)` - Filter by tag
-- `getAllTags()` - List all unique tags
+### Dual-Client System
 
-### plantings.db.ts
-- `getPlantingsBySeason(year, season)` - Season filter
-- `getPlantingsByStatus(status)` - Status filter
-- `getPlantingsByBed(bedId)` - Location filter
-- `getCurrentSeasonPlantings()` - Auto-detect current season
-- `getUpcomingPlantings(daysAhead)` - Find tasks due soon
-- `addPlanting(planting)` - Add new planting
-- `updatePlanting(id, updates)` - Update existing
-- `deletePlanting(id)` - Remove planting
+The project uses **two separate database clients** to support different execution contexts:
+
+1. **`src/db/client.ts`** - Bun SQLite client (`bun:sqlite`)
+   - Used by: Web server, Bun-native scripts
+   - Purpose: High-performance server operations
+   - When to use: Server endpoints, production code
+
+2. **`src/db/client.node.ts`** - Node.js better-sqlite3 client
+   - Used by: Scripts, direct data manipulation, CLI tools
+   - Purpose: Node.js compatibility for `pnpm tsx` execution
+   - When to use: Scripts, direct execution, testing
+
+**CRITICAL:** All API files (`src/api/*.api.ts`) **MUST** import from `client.node.ts` to allow direct execution with `pnpm tsx`. This enables Claude to add data directly to the database without requiring the user to run scripts.
+
+```typescript
+// CORRECT - Allows direct execution with pnpm tsx
+import { db } from "../db/client.node.ts";
+
+// WRONG - Only works with Bun, prevents direct execution
+import { db } from "../db/client.ts";
+```
+
+### Simplified APIs for LLM-Friendly Data Entry
+
+Three simplified APIs make it easy to add data with minimal required fields:
+
+#### 1. Plants API (`src/api/plants.api.ts`)
+
+```typescript
+import { addPlantSimple } from "./src/api/plants.api.ts";
+
+// Minimal - just commonName and variety required
+await addPlantSimple({
+  commonName: "Tomato",
+  variety: "Cherokee Purple",
+  tags: ["annual", "food"]
+});
+
+// Full detail with all optional fields
+await addPlantSimple({
+  commonName: "Squash",
+  variety: "Kabocha",
+  scientificName: "Cucurbita maxima",
+  daysToMaturity: 95,
+  sunRequirement: "full-sun",
+  waterRequirement: "moderate",
+  spacingInches: 36,
+  rowSpacingInches: 72,
+  source: "Annie's Heirloom Seeds",
+  tags: ["annual", "food", "warm-season", "heirloom"]
+});
+```
+
+#### 2. Tasks API (`src/api/tasks.api.ts`)
+
+```typescript
+import { addTaskTemplateSimple, addTaskInstanceSimple } from "./src/api/tasks.api.ts";
+
+// Add recurring task template
+await addTaskTemplateSimple({
+  name: "Water Tomatoes",
+  category: "watering",
+  recurrence: {
+    type: "calendar",
+    intervalType: "weekly",
+    intervalCount: 1,
+    startDate: "2026-06-01"
+  }
+});
+
+// Add one-time task instance
+await addTaskInstanceSimple({
+  name: "Harvest Tomatoes",
+  dueDate: "2026-07-15",
+  category: "harvest",
+  plantId: "tomato-cherokee-purple"
+});
+```
+
+#### 3. Plantings API (`src/api/plantings.api.ts`)
+
+```typescript
+import { addPlantingSimple } from "./src/api/plantings.api.ts";
+
+// Track what's actually planted
+await addPlantingSimple({
+  plantId: "tomato-cherokee-purple",
+  year: 2026,
+  season: "spring",
+  quantity: 6,
+  bedId: "raised-bed-1"
+});
+```
+
+### Direct Execution Pattern
+
+Claude can now add data directly to the database without user intervention:
+
+```bash
+# Claude executes this directly when adding plants
+pnpm tsx -e "import { addPlantSimple } from './src/api/plants.api.ts'; await addPlantSimple({ commonName: 'Basil', variety: 'Genovese', tags: ['annual', 'food'] });"
+```
+
+This pattern enables:
+- ✅ Direct database manipulation by Claude
+- ✅ No need for user to run scripts
+- ✅ Immediate feedback on success/failure
+- ✅ Type-safe data entry
+- ✅ Automatic ID generation and validation
+
+## Database Query Functions
+
+### Task Queries (`src/db/queries/tasks.queries.ts`)
+
+**Template Operations:**
+- `getTaskTemplateById(id)` - Find specific template
+- `getActiveTaskTemplates()` - Get all active templates
+- `getTaskTemplatesByCategory(category)` - Filter by category
+- `addTaskTemplate(template)` - Create new template
+- `updateTaskTemplate(id, updates)` - Update template
+- `deleteTaskTemplate(id)` - Remove template
+
+**Instance Operations:**
+- `getTaskInstanceById(id)` - Find specific instance
+- `getTaskInstancesByStatus(status)` - Filter by status
+- `getTaskInstancesByDateRange(start, end)` - Get tasks in date range
+- `getOverdueTaskInstances()` - Find overdue tasks
+- `addTaskInstance(instance)` - Create task instance
+- `completeTaskInstance(id, outcome, results)` - Mark task complete
+
+**Instance Generation:**
+- `generateInstancesFromTemplate(templateId, startDate, endDate)` - Generate scheduled tasks
+- `generateInstancesForAllTemplates(startDate, endDate)` - Batch generate for all templates
+- `exportTasksToCalendar(startDate, endDate, options)` - Export to iCalendar (.ics) format
+
+### Web Interface
+
+HTMX-based web interface for managing all data (no React/Vue):
+- **Plants**: Browse, search, add plants with web forms
+- **Tasks**: View task templates and instances, create new tasks
+- **Plantings**: Track what's planted, log harvests
+
+Access via web server (when running).
 
 ## Common Workflows
 
@@ -206,23 +377,27 @@ Should complete with no errors.
 
 ## Current Database Stats
 
-- **Total plants**: 69
+- **Total plants**: 80
   - 2 original examples (Tomato, Lettuce)
   - 57 from freeheirloomseeds.org
   - 1 Beit Alpha cucumber
   - 4 from GreenSeed (via agri co-op)
   - 5 from Burpee
   - 1 home-saved (Lilac)
-- **By lifecycle**: 36 annual, 14 perennial, 19 biennial
-- **By purpose**: 55 food, 15 flower, 6 medicinal
-- **Plants with special germination requirements**: 10
+  - 10 from Plantura (German herb set with BIO certification)
+  - 1 from Annie's Heirloom Seeds (Kabocha squash)
+- **By lifecycle**: 45 annual, 16 perennial, 19 biennial
+- **By purpose**: 66 food, 15 flower, 9 medicinal (some plants have multiple purposes)
+- **Plants with special germination requirements**: 13
   - Asparagus (2 varieties) - cold stratification + soaking
   - Yarrow - cold stratification + light
   - Lovage - cold stratification (optional)
   - Sweet William (2 varieties) - cold stratification (optional) + light
-  - Parsley (2 varieties) - warm water soaking
+  - Parsley (3 varieties) - warm water soaking
   - Lilac - cold stratification (40-60 days)
   - Russell Hybrid Lupine - scarification + soaking + cold stratification (optional)
+  - Rosemary - can be slow to germinate (14-21 days)
+  - Thyme - surface sow with light
 
 ## Important Reminders
 
@@ -233,16 +408,31 @@ Should complete with no errors.
 5. **Type safety** - always run type-check after changes
 6. **Duplicate prevention** - check for existing varieties before adding
 7. **Tag consistency** - use lowercase with hyphens for distributor names
+8. **API imports** - ALWAYS import from `client.node.ts` in API files to enable direct execution
+9. **Direct execution** - Use `pnpm tsx` to execute TypeScript files directly
+10. **Simplified APIs** - Use the `addPlantSimple()`, `addTaskTemplateSimple()`, and `addPlantingSimple()` functions for easy data entry
+
+## Implemented Features
+
+✅ **SQLite Database** - Full migration from TypeScript arrays to SQLite with Drizzle ORM
+✅ **Task Management System** - Two-tier task system (templates + instances) with 5 recurrence types
+✅ **Calendar Export** - iCalendar (.ics) format for Google Calendar integration
+✅ **Simplified APIs** - LLM-friendly APIs with minimal required fields
+✅ **Web Interface** - HTMX-based UI for plants, tasks, and plantings
+✅ **Direct Data Entry** - Claude can add data directly without user intervention
+✅ **Planting Tracking** - Track actual plantings with harvest logging
 
 ## Future Enhancements
 
-The type system supports (but not yet implemented):
-- Garden bed configuration database
-- Automatic schedule generation from frost dates
-- Space planning algorithms
-- Crop rotation tracking
-- Harvest logging with quantities
-- Photo attachments
+Planned features not yet implemented:
+- Garden bed configuration database with layout visualization
+- Automatic schedule generation from frost dates and planting plans
+- Space planning algorithms for bed layout optimization
+- Crop rotation tracking and recommendations
+- Photo attachments for plants, tasks, and harvests
+- Mobile app or responsive web design
+- Weather integration for task rescheduling
+- Analytics and reporting on garden productivity
 
 ## Useful Commands
 
@@ -250,12 +440,28 @@ The type system supports (but not yet implemented):
 # Type checking
 pnpm run type-check
 
-# Count plants in database
-grep -c "^  {$" src/data/plants.db.ts
+# Database operations
+pnpm db:generate          # Generate new migration from schema changes
+pnpm db:migrate           # Apply migrations to database
+pnpm db:studio            # Open Drizzle Studio to browse database
 
-# Search for specific plants
-grep -i "commonName.*tomato" src/data/plants.db.ts
+# Direct data entry (Claude can execute these)
+pnpm tsx -e "import { addPlantSimple } from './src/api/plants.api.ts'; await addPlantSimple({ commonName: 'Basil', variety: 'Genovese', tags: ['annual', 'food'] });"
 
-# Find plants from specific source
-grep -i "freeheirloomseeds.org" src/data/plants.db.ts
+# Run scripts
+pnpm tsx src/scripts/add-example-tasks.ts           # Add example task templates
+pnpm tsx src/scripts/generate-task-schedule.ts      # Generate task schedule
+pnpm tsx src/scripts/test-task-system.ts            # Test task system
+
+# Query database with sqlite3
+sqlite3 data/garden.db "SELECT commonName, variety FROM plants WHERE commonName LIKE '%Tomato%';"
+sqlite3 data/garden.db "SELECT COUNT(*) FROM plants;"
 ```
+
+## LLM Guide Documents
+
+For detailed instructions on adding data:
+- **LLM_PLANT_GUIDE.md** - Complete guide for researching and adding plants
+- **LLM_TASKS_GUIDE.md** - Examples for all 5 task recurrence types
+- **LLM_PLANTINGS_GUIDE.md** - Workflow for tracking plantings and harvests
+- **WEB_INTERFACE_README.md** - Overview of the complete web interface system
