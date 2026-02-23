@@ -5,6 +5,7 @@
 This is a TypeScript-based garden seed inventory, task management, and seasonal planting plan management system. The database uses frost-relative timing to make plant data location-independent.
 
 **Key Technologies:**
+
 - **Database**: SQLite with Drizzle ORM
 - **Runtime**: Bun for web server, Node.js (tsx) for scripts and direct data manipulation
 - **Frontend**: HTMX-based web interface (no heavy frameworks)
@@ -69,26 +70,31 @@ hillebrecht/
 When adding new seeds to the database, follow these tagging rules:
 
 1. **Always add the distributor/source as a tag**
+
    - Example: `"freeheirloomseeds.org"`, `"baker-creek"`, `"johnny-seeds"`
    - Use lowercase with hyphens for consistency
 
 2. **Add the distributor's product ID as a tag**
+
    - Include the hashtag/product code from the source
    - Example: `"#ASP1"`, `"#BA3"`, `"#TOM45"`
    - Keep the original format (including # symbol)
 
 3. **REQUIRED: Add lifecycle tag** (exactly ONE required)
+
    - `"annual"` - completes life cycle in one growing season
    - `"perennial"` - lives multiple years
    - `"biennial"` - completes life cycle in two years
 
 4. **REQUIRED: Add purpose tag** (at least ONE required)
+
    - `"food"` - edible plants (vegetables, fruits, culinary herbs)
    - `"flower"` - ornamental flowers grown for beauty
    - `"medicinal"` - plants with medicinal properties
    - **Note:** Plants can have multiple purpose tags (e.g., yarrow is both "flower" and "medicinal")
 
 5. **Add descriptive tags** (optional but recommended)
+
    - Season: `"cool-season"`, `"warm-season"`
    - Special characteristics: `"heirloom"`, `"drought-tolerant"`, `"pollinator-friendly"`
    - Growing method: `"succession-plant"`, `"cut-and-come-again"`
@@ -98,18 +104,20 @@ When adding new seeds to the database, follow these tagging rules:
 6. **Example complete tag set:**
    ```typescript
    tags: [
-     "perennial",      // lifecycle (REQUIRED)
-     "food",           // purpose (REQUIRED)
-     "zones-3-9",      // descriptive
-     "freeheirloomseeds.org",  // distributor
-     "#ASP1",          // product ID
-     "long-lived"      // descriptive
-   ]
+     "perennial", // lifecycle (REQUIRED)
+     "food", // purpose (REQUIRED)
+     "zones-3-9", // descriptive
+     "freeheirloomseeds.org", // distributor
+     "#ASP1", // product ID
+     "long-lived", // descriptive
+   ];
    ```
+7. **Use web search:** Always consult the distributor's website and other reputable sources to find the correct growing information and tags for each plant variety.
 
 ### Handling Duplicate Plants from Different Distributors
 
 **IMPORTANT:** If the user tries to add a seed from a new distributor that has the **same common name AND variety name** as an existing plant:
+
 - **DO NOT create a duplicate entry**
 - **Instead, add the new distributor as a tag** to the existing plant
 - **Add the new distributor's product ID** as a tag
@@ -118,15 +126,27 @@ When adding new seeds to the database, follow these tagging rules:
 
 **Example:**
 If "Tomato - Cherokee Purple" already exists from Baker Creek, and user wants to add the same variety from Johnny's Seeds:
+
 ```typescript
 // Before:
-tags: ["heirloom", "indeterminate", "baker-creek", "#TOM12"]
-metadata: { source: "Baker Creek Heirloom Seeds" }
+tags: ["heirloom", "indeterminate", "baker-creek", "#TOM12"];
+metadata: {
+  source: "Baker Creek Heirloom Seeds";
+}
 
 // After:
-tags: ["heirloom", "indeterminate", "baker-creek", "#TOM12", "johnny-seeds", "#JS-456"]
-metadata: { source: "Baker Creek Heirloom Seeds, Johnny's Selected Seeds" }
-notes: "... Also available from Johnny's Selected Seeds (#JS-456)..."
+tags: [
+  "heirloom",
+  "indeterminate",
+  "baker-creek",
+  "#TOM12",
+  "johnny-seeds",
+  "#JS-456",
+];
+metadata: {
+  source: "Baker Creek Heirloom Seeds, Johnny's Selected Seeds";
+}
+notes: "... Also available from Johnny's Selected Seeds (#JS-456)...";
 ```
 
 ## Type System Notes
@@ -134,10 +154,12 @@ notes: "... Also available from Johnny's Selected Seeds (#JS-456)..."
 ### Frost-Relative Timing
 
 All planting dates use `FrostRelativeTiming` to make data location-independent:
+
 - `weeksFromFrost`: number (positive = after, negative = before, 0 = on frost date)
 - `frostReference`: "last-spring-frost" | "first-fall-frost"
 
 Example:
+
 ```typescript
 springTiming: {
   indoorStart: {
@@ -152,19 +174,23 @@ springTiming: {
 Plants requiring special pre-planting treatment use the `germinationRequirements` field:
 
 **Stratification** (cold/warm treatment):
+
 - Required for: Asparagus, Yarrow, some perennials
 - Start weeks before planting time
 - Critical for scheduling!
 
 **Soaking**:
+
 - Required for: Parsley and other slow germinators
 - Usually 12-24 hours before planting
 
 **Light requirements**:
+
 - Some seeds need light to germinate (don't cover)
 - Examples: Yarrow, Sweet William
 
 **Example:**
+
 ```typescript
 germinationRequirements: {
   stratification: {
@@ -190,6 +216,7 @@ germinationRequirements: {
 The project uses **two separate database clients** to support different execution contexts:
 
 1. **`src/db/client.ts`** - Bun SQLite client (`bun:sqlite`)
+
    - Used by: Web server, Bun-native scripts
    - Purpose: High-performance server operations
    - When to use: Server endpoints, production code
@@ -222,7 +249,7 @@ import { addPlantSimple } from "./src/api/plants.api.ts";
 await addPlantSimple({
   commonName: "Tomato",
   variety: "Cherokee Purple",
-  tags: ["annual", "food"]
+  tags: ["annual", "food"],
 });
 
 // Full detail with all optional fields
@@ -236,14 +263,17 @@ await addPlantSimple({
   spacingInches: 36,
   rowSpacingInches: 72,
   source: "Annie's Heirloom Seeds",
-  tags: ["annual", "food", "warm-season", "heirloom"]
+  tags: ["annual", "food", "warm-season", "heirloom"],
 });
 ```
 
 #### 2. Tasks API (`src/api/tasks.api.ts`)
 
 ```typescript
-import { addTaskTemplateSimple, addTaskInstanceSimple } from "./src/api/tasks.api.ts";
+import {
+  addTaskTemplateSimple,
+  addTaskInstanceSimple,
+} from "./src/api/tasks.api.ts";
 
 // Add recurring task template
 await addTaskTemplateSimple({
@@ -253,8 +283,8 @@ await addTaskTemplateSimple({
     type: "calendar",
     intervalType: "weekly",
     intervalCount: 1,
-    startDate: "2026-06-01"
-  }
+    startDate: "2026-06-01",
+  },
 });
 
 // Add one-time task instance
@@ -262,7 +292,7 @@ await addTaskInstanceSimple({
   name: "Harvest Tomatoes",
   dueDate: "2026-07-15",
   category: "harvest",
-  plantId: "tomato-cherokee-purple"
+  plantId: "tomato-cherokee-purple",
 });
 ```
 
@@ -277,7 +307,7 @@ await addPlantingSimple({
   year: 2026,
   season: "spring",
   quantity: 6,
-  bedId: "raised-bed-1"
+  bedId: "raised-bed-1",
 });
 ```
 
@@ -291,6 +321,7 @@ pnpm tsx -e "import { addPlantSimple } from './src/api/plants.api.ts'; await add
 ```
 
 This pattern enables:
+
 - ✅ Direct database manipulation by Claude
 - ✅ No need for user to run scripts
 - ✅ Immediate feedback on success/failure
@@ -302,6 +333,7 @@ This pattern enables:
 ### Task Queries (`src/db/queries/tasks.queries.ts`)
 
 **Template Operations:**
+
 - `getTaskTemplateById(id)` - Find specific template
 - `getActiveTaskTemplates()` - Get all active templates
 - `getTaskTemplatesByCategory(category)` - Filter by category
@@ -310,6 +342,7 @@ This pattern enables:
 - `deleteTaskTemplate(id)` - Remove template
 
 **Instance Operations:**
+
 - `getTaskInstanceById(id)` - Find specific instance
 - `getTaskInstancesByStatus(status)` - Filter by status
 - `getTaskInstancesByDateRange(start, end)` - Get tasks in date range
@@ -318,6 +351,7 @@ This pattern enables:
 - `completeTaskInstance(id, outcome, results)` - Mark task complete
 
 **Instance Generation:**
+
 - `generateInstancesFromTemplate(templateId, startDate, endDate)` - Generate scheduled tasks
 - `generateInstancesForAllTemplates(startDate, endDate)` - Batch generate for all templates
 - `exportTasksToCalendar(startDate, endDate, options)` - Export to iCalendar (.ics) format
@@ -325,6 +359,7 @@ This pattern enables:
 ### Web Interface
 
 HTMX-based web interface for managing all data (no React/Vue):
+
 - **Plants**: Browse, search, add plants with web forms
 - **Tasks**: View task templates and instances, create new tasks
 - **Plantings**: Track what's planted, log harvests
@@ -351,6 +386,7 @@ Access via web server (when running).
 ### Research Checklist for New Plants
 
 When researching a new plant variety, gather:
+
 - ✅ Common name, variety, scientific name
 - ✅ Days to maturity
 - ✅ Spacing (between plants, rows, square foot)
@@ -369,6 +405,7 @@ When researching a new plant variety, gather:
 ### Verification Steps
 
 After making changes:
+
 ```bash
 pnpm run type-check
 ```
@@ -425,6 +462,7 @@ Should complete with no errors.
 ## Future Enhancements
 
 Planned features not yet implemented:
+
 - Garden bed configuration database with layout visualization
 - Automatic schedule generation from frost dates and planting plans
 - Space planning algorithms for bed layout optimization
@@ -461,6 +499,7 @@ sqlite3 data/garden.db "SELECT COUNT(*) FROM plants;"
 ## LLM Guide Documents
 
 For detailed instructions on adding data:
+
 - **LLM_PLANT_GUIDE.md** - Complete guide for researching and adding plants
 - **LLM_TASKS_GUIDE.md** - Examples for all 5 task recurrence types
 - **LLM_PLANTINGS_GUIDE.md** - Workflow for tracking plantings and harvests
