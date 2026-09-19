@@ -90,6 +90,30 @@ export const plants = sqliteTable("plants", {
     lastModified?: string;
     source?: string;
   }>(),
+
+  // Flat timing columns — spring (weeks from last-spring-frost; negative = before)
+  springDirectSeedEarliestWeeks:  integer("spring_direct_seed_earliest_weeks"),
+  springDirectSeedLatestWeeks:    integer("spring_direct_seed_latest_weeks"),
+  springIndoorStartEarliestWeeks: integer("spring_indoor_start_earliest_weeks"),
+  springIndoorStartLatestWeeks:   integer("spring_indoor_start_latest_weeks"),
+  springTransplantEarliestWeeks:  integer("spring_transplant_earliest_weeks"),
+  springTransplantLatestWeeks:    integer("spring_transplant_latest_weeks"),
+
+  // Flat timing columns — fall (weeks from first-fall-frost; negative = before)
+  fallDirectSeedEarliestWeeks:    integer("fall_direct_seed_earliest_weeks"),
+  fallDirectSeedLatestWeeks:      integer("fall_direct_seed_latest_weeks"),
+  fallIndoorStartEarliestWeeks:   integer("fall_indoor_start_earliest_weeks"),
+  fallIndoorStartLatestWeeks:     integer("fall_indoor_start_latest_weeks"),
+  fallTransplantEarliestWeeks:    integer("fall_transplant_earliest_weeks"),
+  fallTransplantLatestWeeks:      integer("fall_transplant_latest_weeks"),
+
+  // Prep requirements extracted from germinationRequirements JSON
+  stratDaysRequired: integer("strat_days_required"),  // null = none
+  soakHoursRequired: integer("soak_hours_required"),  // null = none; hours, not weeks
+
+  // Pre-computed: earliest week any action must begin (incl. stratification lead time)
+  springActionStartWeeks: integer("spring_action_start_weeks"),
+  fallActionStartWeeks:   integer("fall_action_start_weeks"),
 });
 
 /**

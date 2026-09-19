@@ -22,6 +22,7 @@ import {
   PlantingMethod,
   Season,
 } from "../types/common.types.ts";
+import { computeDerivedTimingFields } from "../lib/plant-timing.ts";
 
 /**
  * Simplified plant data for easy entry
@@ -200,6 +201,13 @@ export async function addPlantSimple(data: SimplePlantData): Promise<string> {
     },
   };
 
+  // Compute derived timing fields
+  const derived = computeDerivedTimingFields(
+    plant.springTiming ?? null,
+    plant.fallTiming ?? null,
+    plant.germinationRequirements ?? null,
+  );
+
   // Insert plant
   await db.insert(plants).values({
     id: plant.id,
@@ -228,6 +236,7 @@ export async function addPlantSimple(data: SimplePlantData): Promise<string> {
     rootstockOptions: null,
     notes: plant.notes || null,
     metadata: plant.metadata || null,
+    ...derived,
   });
 
   // Insert tags
